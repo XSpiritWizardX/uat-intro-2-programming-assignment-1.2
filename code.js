@@ -63,13 +63,22 @@ function playHighCardDuel() {
     // Build wager tier text by calling a second function that takes a parameter.
     var wagerMessage = describeWagerTier(wagerAmount);
 
+
+
+
+// I introduced a bug in the code below by accidentally reversing the comparison operators for the player and dealer card values.
+
     // If player card beats dealer card, player wins the duel.
     if (playerCardValue < dealerCardValue) {
         // Output win message using innerHTML.
+        // console.log("Player card value: " + playerCardValue + " | Dealer card value: " + dealerCardValue);
         gameOutput.innerHTML = "<p class='status-win'>You won the duel!</p>" + wagerMessage;
     }
-    // Else if player card is lower than dealer card, player loses.
+        // Else if player card is lower than dealer card, player loses.
+
+
     else if (playerCardValue > dealerCardValue) {
+        //console.log("Player card value: " + playerCardValue + " | Dealer card value: " + dealerCardValue);
         // Output loss message using innerHTML.
         gameOutput.innerHTML = "<p class='status-loss'>Dealer wins this round. You lose.</p>" + wagerMessage;
     }
