@@ -1,0 +1,75 @@
+<!-- Name: Dustin Bovee | Date: March 4, 2026 -->
+<!DOCTYPE html>
+<!-- Open the root html element -->
+<html lang="en">
+<!-- Open the head section -->
+<head>
+    <!-- Set character encoding -->
+    <meta charset="UTF-8">
+    <!-- Make the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the page title shown in the browser tab -->
+    <title>Quarks Casino - High Card Duel</title>
+    <!-- Link the required shared stylesheet for this project -->
+    <link rel="stylesheet" href="main.css">
+<!-- Close the head section -->
+</head>
+<!-- Open the body section and add a page class for casino styling -->
+<body class="index-page">
+    <!-- Open a centered shell for the game layout -->
+        <!-- Open the page header section -->
+        <header class="casino-header">
+            <!-- Main game page heading -->
+            <h1>Quarks Casino</h1>
+        </header>
+        <nav>
+            <!-- Add navigation heading -->
+            <h2>Navigation</h2>
+            <!-- Link to Home page -->
+            <a href="./index.html">Home</a><br>
+            <!-- Link to Boards page -->
+            <a href="./boards.html">Boards</a><br>
+            <!-- Link to Games page -->
+            <a href="./game.html">Game</a><br>
+        </nav>
+        <!-- Open a form for all user input and call JS on submit -->
+        <form class="casino-form" onsubmit="return playHighCardDuel();">
+            <!-- Label for the player name input -->
+            <label for="playerName">Player Name</label>
+            <!-- Input for player name used in game output -->
+            <input id="playerName" type="text" placeholder="Enter your name" maxlength="30">
+
+            <!-- Label for the wager amount input -->
+            <label for="wagerAmount">Wager (Credits)</label>
+            <!-- Numeric input for wager used by parameterized function -->
+            <input id="wagerAmount" type="number" placeholder="25" min="1" step="1">
+
+            <!-- Submit button that starts the game function -->
+            <button type="submit">Play High Card Duel</button>
+        </form>
+
+        <!-- Section where user validation messages are written with innerHTML -->
+        <section id="validationOutput" class="output validation-box"></section>
+        <!-- Section where card draw details are written with innerHTML -->
+        <section id="rollOutput" class="output"></section>
+        <!-- Section where win/lose/push result is written with innerHTML -->
+        <section id="gameOutput" class="output"></section>
+
+         <!-- Open footer section -->
+    <footer>
+        <!-- Add student name line -->
+        Dustin Bovee<br>
+        <!-- Add school name line -->
+        University of Advancing Technology<br>
+        <!-- Add school street address line -->
+        2625 W. Baseline Road<br>
+        <!-- Add school city, state, and ZIP line -->
+        Tempe, AZ 85283<br>
+    </footer>
+
+    <!-- Link the external JavaScript file that contains game functions -->
+    <script src="code.js"></script>
+<!-- Close the body section -->
+</body>
+<!-- Close the html document -->
+</html>

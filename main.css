@@ -23,3 +23,80 @@ margin-right: 200px;
 header{
 text-align: center;
 }
+
+
+
+
+
+.casino-header h1{
+margin-bottom: 6px;
+letter-spacing: 0.6px;
+}
+
+.subtitle{
+margin-top: 0;
+opacity: 0.9;
+}
+
+.casino-form{
+display: grid;
+gap: 8px;
+margin-top: 14px;
+}
+
+.casino-form input{
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #4e7fbe;
+background: #eef5ff;
+color: #091a30;
+}
+
+.casino-form button{
+margin-top: 8px;
+padding: 10px 14px;
+border: none;
+border-radius: 8px;
+background: linear-gradient(135deg, #57a4ff, #2a64b7);
+color: #ffffff;
+font-weight: 700;
+cursor: pointer;
+}
+
+.casino-form button:hover{
+filter: brightness(1.08);
+}
+
+.output{
+margin-top: 12px;
+padding: 10px 12px;
+border-radius: 8px;
+background: rgba(255, 255, 255, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.validation-box{
+min-height: 24px;
+}
+
+.status-win{
+color: #7df5ab;
+font-weight: 800;
+}
+
+.status-loss{
+color: #ff9da4;
+font-weight: 800;
+}
+
+.status-push{
+color: #ffe37a;
+font-weight: 800;
+}
+
+.wager-note{
+margin-top: 8px;
+font-style: italic;
+opacity: 0.95;
+}
+
