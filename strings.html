@@ -1,0 +1,84 @@
+<!-- Name: Dustin Bovee -->
+<!DOCTYPE html>
+<!-- Open the root html tag -->
+<html lang="en">
+<!-- Open the head section -->
+<head>
+    <!-- Define UTF-8 character encoding -->
+    <meta charset="UTF-8">
+    <!-- Make layout responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the page title in the browser tab -->
+    <title>Secure Strings Vault</title>
+    <!-- Link the custom stylesheet for this page -->
+    <link rel="stylesheet" href="strings.css">
+<!-- Close the head section -->
+</head>
+<!-- Open the body section -->
+<body class="index-page">
+    <!-- Open left-side navigation links -->
+    <nav>
+        <!-- Add navigation heading -->
+        <h2>Navigation</h2>
+        <!-- Link to Home page -->
+        <a href="./index.html">Home</a><br>
+        <!-- Link to Boards page -->
+        <a href="./boards.html">Boards</a><br>
+        <!-- Link to Games page -->
+        <a href="./game.html">Game</a><br>
+        <!-- Link to Strings page -->
+        <a href="./strings.html">Strings</a><br>
+    </nav>
+
+    <!-- Open the main container for centered content -->
+    <main class="vault-shell">
+        <!-- Open the page header section -->
+        <header>
+            <!-- Main heading for the page -->
+            <h1>Secure Strings Vault</h1>
+            <!-- Support text explaining what the form does -->
+            <p class="tagline">Enter your identity details to unlock the secret message.</p>
+        <!-- Close the page header section -->
+        </header>
+
+        <!-- Open one form that contains all user inputs and one submit button -->
+        <form id="secretForm" class="vault-form">
+            <!-- Label for first name input -->
+            <label for="firstName">First Name</label>
+            <!-- First name text input -->
+            <input id="firstName" type="text" placeholder="First name" maxlength="20">
+
+            <!-- Label for last name input -->
+            <label for="lastName">Last Name</label>
+            <!-- Last name text input -->
+            <input id="lastName" type="text" placeholder="Last name" maxlength="20">
+
+            <!-- Label for ZIP code input -->
+            <label for="zipCode">ZIP Code</label>
+            <!-- ZIP code text input limited to 5 characters -->
+            <input id="zipCode" type="text" placeholder="5-digit ZIP" maxlength="5">
+
+            <!-- Submit button for validating all inputs at once -->
+            <button type="submit">Unlock Secret</button>
+        <!-- Close the form section -->
+        </form>
+
+        <!-- Output area used for validation messages via innerHTML -->
+        <section id="validationOutput" class="message-box"></section>
+        <!-- Scrolling banner shown after a successful unlock -->
+        <section id="unlockBanner" class="unlock-banner">
+            <!-- Moving text track for the banner message -->
+            <p class="banner-track">SECRET MESSAGE UNLOCKED • SECRET MESSAGE UNLOCKED • SECRET MESSAGE UNLOCKED •</p>
+        </section>
+        <!-- Output area used for the unlocked secret message via innerHTML -->
+        <section id="secretOutput" class="secret-box"></section>
+    <!-- Close the main container -->
+    </main>
+  
+
+    <!-- Link the external JavaScript file for validation logic -->
+    <script src="strings.js"></script>
+<!-- Close the body section -->
+</body>
+<!-- Close the html document -->
+</html>

@@ -1,0 +1,171 @@
+/* Style the whole page background and base typography */
+body {
+    margin: 0;
+    min-height: 100vh;
+    place-items: center;
+    padding-top: 2rem;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: #eaf3ff;
+    background: radial-gradient(circle at top, #ebedf1, #657fa3 52%, #000a1a);
+}
+nav{
+height: 600px;
+width: 200px;
+float: left;
+padding: 5px;
+line-height: 30px;
+position: fixed;
+left: 20px;
+color: white;
+}
+a {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-weight: 700;
+}
+/* Style the main vault container card */
+.vault-shell {
+    width: min(760px, 100%);
+    background: rgba(9, 25, 47, 0.9);
+    border: 2px solid #4d86c8;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.38);
+}
+
+/* Style the top heading area */
+header {
+    text-align: center;
+}
+
+/* Style the main title */
+h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    letter-spacing: 0.4px;
+    color: rgb(255, 255, 255);
+}
+
+/* Style subtitle text */
+.tagline {
+    margin-top: 8px;
+    opacity: 0.9;
+        color: rgb(255, 255, 255);
+
+}
+
+/* Style the form layout */
+.vault-form {
+    display: grid;
+    gap: 9px;
+    margin-top: 14px;
+}
+
+/* Style labels for all fields */
+.vault-form label {
+    font-weight: 700;
+        color: rgb(255, 255, 255);
+
+}
+
+/* Style text input controls */
+.vault-form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #86aede;
+    background: #eef5ff;
+    color: #0d2039;
+}
+
+/* Style the submit button */
+.vault-form button {
+    margin-top: 8px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4ba3ff, #2a67ba);
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Add subtle hover effect for button */
+.vault-form button:hover {
+    filter: brightness(1.08);
+}
+
+/* Style shared message boxes */
+.message-box,
+.secret-box {
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px 12px;
+    min-height: 24px;
+    min-width: 200px;
+}
+
+/* Style error message text */
+.error-text {
+    margin: 0;
+    color: #ffadad;
+    font-weight: 800;
+}
+
+/* Style success message text */
+.success-text {
+    margin: 0;
+    color: #9dffcf;
+    font-weight: 800;
+}
+
+/* Style secret output heading */
+.secret-box h2 {
+    margin: 0 0 8px;
+}
+
+/* Hide unlock banner by default until validation succeeds */
+.unlock-banner {
+    display: none;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(123, 255, 196, 0.55);
+    background: rgba(40, 167, 69, 0.18);
+    overflow: hidden;
+}
+
+/* Show banner after successful unlock */
+.unlock-banner.active {
+    display: block;
+}
+
+/* Create smooth scrolling text inside the banner */
+.banner-track {
+    margin: 0;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-weight: 800;
+    color: #9dffcf;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    transform: translateX(100%);
+    animation: bannerScroll 12s linear infinite;
+}
+
+/* Animate banner text from right to left */
+@keyframes bannerScroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Style note text under secret message */
+.tiny-note {
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
