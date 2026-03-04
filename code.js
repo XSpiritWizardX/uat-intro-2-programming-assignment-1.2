@@ -64,12 +64,12 @@ function playHighCardDuel() {
     var wagerMessage = describeWagerTier(wagerAmount);
 
     // If player card beats dealer card, player wins the duel.
-    if (playerCardValue > dealerCardValue) {
+    if (playerCardValue < dealerCardValue) {
         // Output win message using innerHTML.
         gameOutput.innerHTML = "<p class='status-win'>You won the duel!</p>" + wagerMessage;
     }
     // Else if player card is lower than dealer card, player loses.
-    else if (playerCardValue < dealerCardValue) {
+    else if (playerCardValue > dealerCardValue) {
         // Output loss message using innerHTML.
         gameOutput.innerHTML = "<p class='status-loss'>Dealer wins this round. You lose.</p>" + wagerMessage;
     }
@@ -115,12 +115,12 @@ function getCardName(cardValue) {
 // Helper function that takes a wager parameter and returns a wager style message.
 function describeWagerTier(wagerAmount) {
     // If wager is high, show high-roller message.
-    if (wagerAmount >= 100) {
+    if (wagerAmount >= 1000) {
         // Return HTML text for output area.
         return "<p class='wager-note'>High Roller: " + wagerAmount + " credits on the line.</p>";
     }
     // Else if wager is medium, show steady-player message.
-    else if (wagerAmount >= 25) {
+    else if (wagerAmount >= 250) {
         // Return HTML text for output area.
         return "<p class='wager-note'>Steady Play: " + wagerAmount + " credits wagered.</p>";
     }
