@@ -36,6 +36,15 @@
     </nav>
     <!-- Open a wrapper section for content styling -->
     <section class="card">
+        <!-- Add control panel section for event-driven meme controls -->
+        <section class="meme-controls">
+            <!-- Start button calls JavaScript to begin movement and toggle button states -->
+            <button id="startButton" onclick="startMemeButtonAction();">Start</button>
+            <!-- Stop button calls JavaScript to stop movement and toggle button states -->
+            <button id="stopButton" onclick="stopMemeButtonAction();" disabled>Stop</button>
+        </section>
+        <!-- Status message output area for movement events -->
+        <p id="memeStatus" class="meme-status"></p>
         <!-- Open paragraph tags -->
         <div class="meme-cont">
             <!-- Add meme image between opening and closing paragraph tags -->
@@ -65,6 +74,8 @@
         <!-- Add school city, state, and ZIP line -->
         Tempe, AZ 85283<br>
     </footer>
+    <!-- Link external JavaScript for Start/Stop event-driven meme movement -->
+    <script src="index.js"></script>
     <!-- Close the body section -->
 </body>
 <!-- Close the html document -->

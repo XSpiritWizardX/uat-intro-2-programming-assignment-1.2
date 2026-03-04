@@ -100,3 +100,94 @@ font-style: italic;
 opacity: 0.95;
 }
 
+a{
+color: #0b4e9b;
+text-decoration: none;
+font-weight: 700;
+}
+
+a:hover{
+text-decoration: underline;
+}
+
+.card{
+margin-left: 220px;
+margin-right: 20px;
+background: #ffffff;
+border: 2px solid #9dc7f2;
+border-radius: 12px;
+padding: 18px;
+box-shadow: 0 10px 24px rgba(16, 42, 67, 0.12);
+}
+
+.meme-controls{
+display: flex;
+justify-content: center;
+gap: 12px;
+margin-bottom: 10px;
+}
+
+.meme-controls button{
+padding: 10px 16px;
+border: none;
+border-radius: 8px;
+background: linear-gradient(135deg, #4f9fff, #2a64b7);
+color: #ffffff;
+font-weight: 800;
+cursor: pointer;
+}
+
+.meme-controls button:disabled{
+opacity: 0.55;
+cursor: not-allowed;
+}
+
+.meme-status{
+text-align: center;
+font-weight: 700;
+color: #174a83;
+min-height: 24px;
+margin: 8px 0 14px;
+}
+
+.meme-cont{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 18px;
+flex-wrap: wrap;
+min-height: 320px;
+}
+
+.meme-image{
+width: min(100%, 280px);
+height: auto;
+border: 4px solid #ffffff;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(16, 42, 67, 0.18);
+}
+
+.meme-p-cont{
+display: flex;
+flex-direction: column;
+gap: 26px;
+font-weight: 800;
+color: #12365f;
+}
+
+@media (max-width: 900px){
+nav{
+float: none;
+width: auto;
+height: auto;
+}
+
+.card{
+margin-left: 0;
+margin-right: 0;
+}
+
+footer{
+margin-right: 0;
+}
+}
