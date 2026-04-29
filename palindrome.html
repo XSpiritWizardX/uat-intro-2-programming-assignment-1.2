@@ -1,0 +1,84 @@
+<!-- Name: Dustin Bovee -->
+<!DOCTYPE html>
+<!-- Open the root html element for the palindrome page. -->
+<html lang="en">
+<!-- Open the head section for page setup information. -->
+<head>
+    <!-- Set the character encoding for the page. -->
+    <meta charset="UTF-8">
+    <!-- Make the layout scale correctly on phones and tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the browser tab title. -->
+    <title>Palindrome Checker</title>
+    <!-- Link the external CSS file for this palindrome page. -->
+    <link rel="stylesheet" href="palindrome.css">
+<!-- Close the head section. -->
+</head>
+<!-- Open the visible body of the webpage. -->
+<body class="palindrome-page">
+    <!-- Open the fixed navigation menu. -->
+    <nav>
+        <!-- Add the navigation heading. -->
+        <h2>Navigation</h2>
+        <!-- Link to the home page. -->
+        <a href="./index.html">Home</a><br>
+        <!-- Link to the boards page. -->
+        <a href="./boards.html">Boards</a><br>
+        <!-- Link to the game page. -->
+        <a href="./game.html">Game</a><br>
+        <!-- Link to the strings page. -->
+        <a href="./strings.html">Strings</a><br>
+        <!-- Link to the palindrome checker page. -->
+        <a href="./palindrome.html">Palindrome</a><br>
+    <!-- Close the navigation menu. -->
+    </nav>
+
+    <!-- Open the main content area for the checker. -->
+    <main class="palindrome-shell">
+        <!-- Open the page header area. -->
+        <header class="page-header">
+            <!-- Add a decorative mirrored text badge. -->
+            <p class="mirror-badge">LEVEL - RADAR - CIVIC</p>
+            <!-- Add the main page heading. -->
+            <h1>Palindrome Checker</h1>
+            <!-- Add a short instruction prompt for the user. -->
+            <p class="tagline">Enter a word or phrase to see if it reads the same forward and backward.</p>
+        <!-- Close the page header area. -->
+        </header>
+
+        <!-- Open the form used for every piece of user input. -->
+        <form id="palindromeForm" class="palindrome-form">
+            <!-- Add the label for the phrase input field. -->
+            <label for="phraseInput">Word or Phrase</label>
+            <!-- Add the text input where the user types a word or phrase. -->
+            <input id="phraseInput" type="text" placeholder="Example: never odd or even" maxlength="80">
+
+            <!-- Add the label for the user's next action. -->
+            <label for="nextChoice">After this check</label>
+            <!-- Add a select menu so the user can keep going or finish. -->
+            <select id="nextChoice">
+                <!-- Add the option to keep the input loop running. -->
+                <option value="again">Enter another word</option>
+                <!-- Add the option to end the input loop. -->
+                <option value="done">I am done</option>
+            <!-- Close the select menu. -->
+            </select>
+
+            <!-- Add the submit button for the form. -->
+            <button id="checkButton" type="submit">Check Palindrome</button>
+        <!-- Close the form. -->
+        </form>
+
+        <!-- Add an output area for validation and palindrome messages using innerHTML. -->
+        <section id="messageOutput" class="message-box"></section>
+        <!-- Add an output area for the list of checked phrases using innerHTML. -->
+        <section id="historyOutput" class="history-box"></section>
+    <!-- Close the main content area. -->
+    </main>
+
+    <!-- Link the external JavaScript file for palindrome logic. -->
+    <script src="palindrome.js"></script>
+<!-- Close the visible body of the webpage. -->
+</body>
+<!-- Close the html document. -->
+</html>

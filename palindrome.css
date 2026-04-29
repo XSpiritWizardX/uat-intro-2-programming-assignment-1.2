@@ -1,0 +1,220 @@
+/* Style the full palindrome page with a bright creative background. */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px;
+    font-family: Georgia, "Trebuchet MS", sans-serif;
+    color: #14213d;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(230, 244, 255, 0.88)),
+        repeating-linear-gradient(45deg, #ffcf70 0 18px, #62c6c4 18px 36px, #ffffff 36px 54px);
+}
+
+/* Style the left navigation area. */
+nav {
+    position: fixed;
+    top: 28px;
+    left: 24px;
+    width: 160px;
+    padding: 14px;
+    border: 2px solid #14213d;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 6px 6px 0 #14213d;
+}
+
+/* Style the navigation heading. */
+nav h2 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Style the navigation links. */
+a {
+    color: #005f73;
+    font-weight: 700;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+/* Add a simple hover style for links. */
+a:hover {
+    color: #ae2012;
+}
+
+/* Style the main palindrome content container. */
+.palindrome-shell {
+    width: min(760px, calc(100% - 240px));
+    margin-left: 220px;
+    padding: 28px;
+    border: 3px solid #14213d;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 10px 10px 0 #14213d;
+}
+
+/* Center the page header text. */
+.page-header {
+    text-align: center;
+}
+
+/* Style the mirrored word badge. */
+.mirror-badge {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #14213d;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Style the main heading. */
+h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 0;
+}
+
+/* Style the instruction text. */
+.tagline {
+    max-width: 560px;
+    margin: 10px auto 0;
+    font-size: 1.05rem;
+}
+
+/* Style the form layout. */
+.palindrome-form {
+    display: grid;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+/* Style form labels. */
+.palindrome-form label {
+    font-weight: 800;
+}
+
+/* Style text inputs and select menus. */
+.palindrome-form input,
+.palindrome-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid #14213d;
+    border-radius: 8px;
+    background: #f8fbff;
+    color: #14213d;
+    font: inherit;
+}
+
+/* Style the submit button. */
+.palindrome-form button {
+    margin-top: 8px;
+    padding: 12px 16px;
+    border: 2px solid #14213d;
+    border-radius: 8px;
+    background: #ee9b00;
+    color: #14213d;
+    font: inherit;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #14213d;
+}
+
+/* Add a button hover effect. */
+.palindrome-form button:hover {
+    background: #ffb703;
+}
+
+/* Style disabled form controls after the loop ends. */
+.palindrome-form input:disabled,
+.palindrome-form select:disabled,
+.palindrome-form button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Style the output boxes. */
+.message-box,
+.history-box {
+    margin-top: 18px;
+    padding: 16px;
+    min-height: 32px;
+    border: 2px solid #14213d;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+/* Remove extra top margin from output headings. */
+.message-box h2,
+.history-box h2 {
+    margin-top: 0;
+}
+
+/* Style success text. */
+.success-text {
+    margin-bottom: 0;
+    color: #007f5f;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+/* Style error text. */
+.error-text {
+    margin-bottom: 0;
+    color: #bb3e03;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+/* Style helpful information text. */
+.info-text {
+    color: #33415c;
+    font-weight: 700;
+}
+
+/* Style smaller comparison text. */
+.small-text {
+    color: #33415c;
+    font-size: 0.95rem;
+}
+
+/* Remove default bottom margin from the history list. */
+.history-box ol {
+    margin-bottom: 0;
+    padding-left: 24px;
+}
+
+/* Space out each history entry. */
+.history-box li {
+    margin-top: 8px;
+}
+
+/* Style the phrase inside each history row. */
+.history-box span {
+    margin-right: 12px;
+}
+
+/* Style the result label inside each history row. */
+.history-box strong {
+    color: #005f73;
+}
+
+/* Make the page comfortable on narrow screens. */
+@media (max-width: 760px) {
+    /* Move navigation into the normal page flow on small screens. */
+    nav {
+        position: static;
+        width: auto;
+        margin-bottom: 18px;
+    }
+
+    /* Let the checker use the full width on small screens. */
+    .palindrome-shell {
+        width: auto;
+        margin-left: 0;
+    }
+}
