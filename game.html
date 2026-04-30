@@ -1,81 +1,117 @@
 <!-- Name: Dustin Bovee | Date: March 4, 2026 -->
 <!DOCTYPE html>
-<!-- Open the root html element -->
+<!-- Open the root html element. -->
 <html lang="en">
-<!-- Open the head section -->
+<!-- Open the head section. -->
 <head>
-    <!-- Set character encoding -->
+    <!-- Set character encoding. -->
     <meta charset="UTF-8">
-    <!-- Make the page responsive on mobile devices -->
+    <!-- Make the page responsive on mobile devices. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Set the page title shown in the browser tab -->
-    <title>Quarks Casino - High Card Duel</title>
-    <!-- Link the required shared stylesheet for this project -->
+    <!-- Set the page title shown in the browser tab. -->
+    <title>Quarks Casino Arcade</title>
+    <!-- Link the required shared stylesheet for this project. -->
     <link rel="stylesheet" href="main.css">
-<!-- Close the head section -->
+<!-- Close the head section. -->
 </head>
-<!-- Open the body section and add a page class for casino styling -->
-<body class="index-page">
-    <!-- Open a centered shell for the game layout -->
-        <!-- Open the page header section -->
-        <header class="casino-header">
-            <!-- Main game page heading -->
-            <h1>Quarks Casino</h1>
-        </header>
-        <nav>
-            <!-- Add navigation heading -->
-            <h2>Navigation</h2>
-            <!-- Link to Home page -->
-            <a href="./index.html">Home</a><br>
-            <!-- Link to Boards page -->
-            <a href="./boards.html">Boards</a><br>
-            <!-- Link to Games page -->
-            <a href="./game.html">Game</a><br>
-              <!-- Link to Strings page -->
+<!-- Open the body section and add a page class for casino styling. -->
+<body class="index-page game-page">
+    <!-- Open the page header section. -->
+    <header class="casino-header">
+        <!-- Main game page heading. -->
+        <h1>Quarks Casino Arcade</h1>
+        <!-- Short description for the arcade page. -->
+        <p>Choose a mini game, place a credit wager, and test your luck.</p>
+    <!-- Close the page header section. -->
+    </header>
+
+    <!-- Open the navigation menu. -->
+    <nav>
+        <!-- Add navigation heading. -->
+        <h2>Navigation</h2>
+        <!-- Link to Home page. -->
+        <a href="./index.html">Home</a><br>
+        <!-- Link to Boards page. -->
+        <a href="./boards.html">Boards</a><br>
+        <!-- Link to Games page. -->
+        <a href="./game.html">Game</a><br>
+        <!-- Link to Strings page. -->
         <a href="./strings.html">Strings</a><br>
-              <!-- Link to Palindrome page -->
+        <!-- Link to Palindrome page. -->
         <a href="./palindrome.html">Palindrome</a><br>
-              <!-- Link to Sound page -->
+        <!-- Link to Sound page. -->
         <a href="./sound.html">Sound</a><br>
-        </nav>
-        <!-- Open a form for all user input and call JS on submit -->
-        <form class="casino-form" onsubmit="return playHighCardDuel();">
-            <!-- Label for the player name input -->
+    <!-- Close the navigation menu. -->
+    </nav>
+
+    <!-- Open the main arcade card. -->
+    <main class="card casino-card">
+        <!-- Open the form for all game user input. -->
+        <form id="casinoForm" class="casino-form">
+            <!-- Label for the player name input. -->
             <label for="playerName">Player Name</label>
-            <!-- Input for player name used in game output -->
+            <!-- Input for player name used in game output. -->
             <input id="playerName" type="text" placeholder="Enter your name" maxlength="30">
 
-            <!-- Label for the wager amount input -->
-            <label for="wagerAmount">Wager (Credits)</label>
-            <!-- Numeric input for wager used by parameterized function -->
+            <!-- Label for the game selection menu. -->
+            <label for="gameChoice">Choose Game</label>
+            <!-- Select menu for choosing which mini game to play. -->
+            <select id="gameChoice">
+                <!-- Option for the original high card game. -->
+                <option value="high-card">High Card Duel</option>
+                <!-- Option for the dice race game. -->
+                <option value="dice-race">Dice Race</option>
+                <!-- Option for the lucky number game. -->
+                <option value="lucky-number">Lucky Number Hunt</option>
+                <!-- Option for the coin flip game. -->
+                <option value="coin-flip">Coin Flip Clash</option>
+                <!-- Option for the slot machine game. -->
+                <option value="slot-sprint">Slot Sprint</option>
+            <!-- Close the game selection menu. -->
+            </select>
+
+            <!-- Label for the wager amount input. -->
+            <label for="wagerAmount">Wager Credits</label>
+            <!-- Numeric input for wager used by the game functions. -->
             <input id="wagerAmount" type="number" placeholder="25" min="1" step="1">
 
-            <!-- Submit button that starts the game function -->
-            <button type="submit">Play High Card Duel</button>
+            <!-- Label for the lucky number input. -->
+            <label for="luckyNumber">Lucky Number 1-10</label>
+            <!-- Numeric input used by the lucky number game. -->
+            <input id="luckyNumber" type="number" placeholder="7" min="1" max="10" step="1">
+
+            <!-- Submit button that starts the selected game. -->
+            <button type="submit">Play Selected Game</button>
+        <!-- Close the game form. -->
         </form>
 
-        <!-- Section where user validation messages are written with innerHTML -->
+        <!-- Section where user validation messages are written with innerHTML. -->
         <section id="validationOutput" class="output validation-box"></section>
-        <!-- Section where card draw details are written with innerHTML -->
+        <!-- Section where game details are written with innerHTML. -->
         <section id="rollOutput" class="output"></section>
-        <!-- Section where win/lose/push result is written with innerHTML -->
+        <!-- Section where win, lose, or push result is written with innerHTML. -->
         <section id="gameOutput" class="output"></section>
+        <!-- Section where session history is written with innerHTML. -->
+        <section id="historyOutput" class="output history-output"></section>
+    <!-- Close the main arcade card. -->
+    </main>
 
-         <!-- Open footer section -->
+    <!-- Open footer section. -->
     <footer>
-        <!-- Add student name line -->
+        <!-- Add student name line. -->
         Dustin Bovee<br>
-        <!-- Add school name line -->
+        <!-- Add school name line. -->
         University of Advancing Technology<br>
-        <!-- Add school street address line -->
+        <!-- Add school street address line. -->
         2625 W. Baseline Road<br>
-        <!-- Add school city, state, and ZIP line -->
+        <!-- Add school city, state, and ZIP line. -->
         Tempe, AZ 85283<br>
+    <!-- Close footer section. -->
     </footer>
 
-    <!-- Link the external JavaScript file that contains game functions -->
+    <!-- Link the external JavaScript file that contains game functions. -->
     <script src="code.js"></script>
-<!-- Close the body section -->
+<!-- Close the body section. -->
 </body>
-<!-- Close the html document -->
+<!-- Close the html document. -->
 </html>
