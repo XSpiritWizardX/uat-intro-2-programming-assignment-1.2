@@ -1,0 +1,152 @@
+/* Style the full table page background and base text. */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: #14213d;
+    background: linear-gradient(135deg, #fef6e4, #e8f4ff);
+}
+
+/* Style the left navigation menu. */
+nav {
+    position: fixed;
+    top: 28px;
+    left: 24px;
+    width: 170px;
+    padding: 14px;
+    line-height: 30px;
+    border: 2px solid #8bd3dd;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 6px 6px 0 rgba(20, 33, 61, 0.16);
+}
+
+/* Style the navigation heading. */
+nav h2 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Style navigation links. */
+a {
+    color: #0b4e9b;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Add a hover style for navigation links. */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style the main table content container. */
+.table-shell {
+    width: min(920px, calc(100% - 240px));
+    margin-left: 230px;
+    padding: 28px;
+    border: 3px solid #8bd3dd;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 14px 34px rgba(20, 33, 61, 0.14);
+}
+
+/* Center the page header content. */
+header {
+    text-align: center;
+}
+
+/* Style the small label above the heading. */
+.table-label {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #f582ae;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+/* Style the main heading. */
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0;
+}
+
+/* Style the page description text. */
+.tagline {
+    max-width: 620px;
+    margin: 10px auto 0;
+    line-height: 1.5;
+}
+
+/* Let the table scroll horizontally on narrow screens. */
+.table-wrapper {
+    margin-top: 24px;
+    overflow-x: auto;
+}
+
+/* Style the table itself. */
+table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+/* Style the table caption. */
+caption {
+    margin-bottom: 12px;
+    font-weight: 900;
+    color: #33415c;
+}
+
+/* Style table headers and cells. */
+th,
+td {
+    padding: 14px;
+    border: 1px solid #d7e6f7;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Style table header cells. */
+th {
+    background: #172c66;
+    color: #ffffff;
+}
+
+/* Add alternating row color for readability. */
+tbody tr:nth-child(even) {
+    background: #f5fbff;
+}
+
+/* Add a row hover effect for scanning the table. */
+tbody tr:hover {
+    background: #fff4d6;
+}
+
+/* Make the first column stand out as the row label. */
+td:first-child {
+    font-weight: 900;
+    color: #0b4e9b;
+}
+
+/* Make the page comfortable on narrow screens. */
+@media (max-width: 760px) {
+    /* Move navigation into normal flow on small screens. */
+    nav {
+        position: static;
+        width: auto;
+        margin-bottom: 18px;
+    }
+
+    /* Let the table content use the full width on small screens. */
+    .table-shell {
+        width: auto;
+        margin-left: 0;
+    }
+}
