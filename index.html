@@ -1,88 +1,138 @@
 <!-- Name: Dustin Bovee | Date: March 4, 2026 -->
 <!DOCTYPE html>
-<!-- Open the root html element -->
+<!-- Open the root html element for the landing page. -->
 <html lang="en">
-<!-- Open the head section -->
+<!-- Open the head section. -->
 <head>
-    <!-- Define character encoding -->
+    <!-- Define character encoding. -->
     <meta charset="UTF-8">
-    <!-- Make layout responsive on mobile devices -->
+    <!-- Make layout responsive on mobile devices. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Set the page title text -->
-    <title>Welcome to My Meme Page</title>
-    <!-- Link to external stylesheet -->
+    <!-- Set the page title text. -->
+    <title>Dustin Bovee Web Presence</title>
+    <!-- Link to external stylesheet. -->
     <link rel="stylesheet" href="main.css">
-    <!-- Close the head section -->
+<!-- Close the head section. -->
 </head>
-<!-- Open the body section -->
-<body class="index-page">
-    <!-- Open header section around the h1 tag -->
+<!-- Open the body section. -->
+<body class="index-page landing-page">
+    <!-- Open header section around the h1 tag. -->
     <header>
-        <!-- Add the main page header text -->
-        <h1>Learning HTML with a Meme</h1>
+        <!-- Add the main landing page heading. -->
+        <h1>Dustin Bovee Web Presence</h1>
+        <!-- Add a short description for the site. -->
+        <p class="subtitle">A landing page for my programming assignments, pages, and interactive projects.</p>
+    <!-- Close header section. -->
     </header>
-    <!-- Open navigation section -->
+    <!-- Open navigation section. -->
     <nav>
-        <!-- Add navigation heading -->
+        <!-- Add navigation heading. -->
         <h2>Navigation</h2>
-        <!-- Link to Home page -->
+        <!-- Link to Home landing page. -->
         <a href="./index.html">Home</a><br>
-        <!-- Link to Boards page -->
+        <!-- Link to Meme page. -->
+        <a href="./meme.html">Meme</a><br>
+        <!-- Link to Boards page. -->
         <a href="./boards.html">Boards</a><br>
-        <!-- Link to Games page -->
+        <!-- Link to Games page. -->
         <a href="./game.html">Game</a><br>
-        <!-- Link to Strings page -->
+        <!-- Link to Strings page. -->
         <a href="./strings.html">Strings</a><br>
-        <!-- Link to Palindrome page -->
+        <!-- Link to Palindrome page. -->
         <a href="./palindrome.html">Palindrome</a><br>
-        <!-- Link to Sound page -->
+        <!-- Link to Sound page. -->
         <a href="./sound.html">Sound</a><br>
-        <!-- Link to Table page -->
+        <!-- Link to Table page. -->
         <a href="./table.html">Table</a><br>
+    <!-- Close navigation section. -->
     </nav>
-    <!-- Open a wrapper section for content styling -->
-    <section class="card">
-        <!-- Add control panel section for event-driven meme controls -->
-        <section class="meme-controls">
-            <!-- Start button calls JavaScript to begin movement and toggle button states -->
-            <button id="startButton" onclick="startMemeButtonAction();">Start</button>
-            <!-- Stop button calls JavaScript to stop movement and toggle button states -->
-            <button id="stopButton" onclick="stopMemeButtonAction();" disabled>Stop</button>
+    <!-- Open the landing page content card. -->
+    <main class="card landing-grid">
+        <!-- Open the meme page link card. -->
+        <section class="landing-item">
+            <!-- Add the meme page title. -->
+            <h2>Meme Page</h2>
+            <!-- Add the meme page description. -->
+            <p>View the school-appropriate meme and movement controls.</p>
+            <!-- Add the meme page link. -->
+            <a href="./meme.html">Open Meme</a>
+        <!-- Close the meme page link card. -->
         </section>
-        <!-- Status message output area for movement events -->
-        <p id="memeStatus" class="meme-status"></p>
-        <!-- Open paragraph tags -->
-        <div class="meme-cont">
-            <!-- Add meme image between opening and closing paragraph tags -->
-            <img id="memeImage" class="meme-image" src="school-meme.jpg" alt="School-appropriate coding meme">
-            <div class="meme-p-cont">
-                <p>
-                    BEATING THE GAME AND <br/>NEVER TOUCHING IT AGAIN?
-                </p>
-                <p>
-                    BEATING THE GAME AND <br/>STARTING AGAIN FROM LEVEL 1?
-                </p>
-            </div>
-        </div>
-        <!-- Open and close another paragraph for description text -->
-        <p>
-            This page includes all the basic HTML tags and a fun meme image to complete the assignment.
-        </p>
-    </section>
-    <!-- Open footer section -->
+        <!-- Open the game page link card. -->
+        <section class="landing-item">
+            <!-- Add the game page title. -->
+            <h2>Game Arcade</h2>
+            <!-- Add the game page description. -->
+            <p>Play the Quarks Casino mini games with form input and JavaScript logic.</p>
+            <!-- Add the game page link. -->
+            <a href="./game.html">Open Game</a>
+        <!-- Close the game page link card. -->
+        </section>
+        <!-- Open the palindrome page link card. -->
+        <section class="landing-item">
+            <!-- Add the palindrome page title. -->
+            <h2>Palindrome Checker</h2>
+            <!-- Add the palindrome page description. -->
+            <p>Check whether a word or phrase reads the same forward and backward.</p>
+            <!-- Add the palindrome page link. -->
+            <a href="./palindrome.html">Open Palindrome</a>
+        <!-- Close the palindrome page link card. -->
+        </section>
+        <!-- Open the strings page link card. -->
+        <section class="landing-item">
+            <!-- Add the strings page title. -->
+            <h2>User Input Validation</h2>
+            <!-- Add the strings page description. -->
+            <p>Use the secure strings vault with name and ZIP validation.</p>
+            <!-- Add the strings page link. -->
+            <a href="./strings.html">Open Strings</a>
+        <!-- Close the strings page link card. -->
+        </section>
+        <!-- Open the boards page link card. -->
+        <section class="landing-item">
+            <!-- Add the boards page title. -->
+            <h2>Objectives Page</h2>
+            <!-- Add the boards page description. -->
+            <p>Read the Computer Science program objectives.</p>
+            <!-- Add the boards page link. -->
+            <a href="./boards.html">Open Boards</a>
+        <!-- Close the boards page link card. -->
+        </section>
+        <!-- Open the table page link card. -->
+        <section class="landing-item">
+            <!-- Add the table page title. -->
+            <h2>Table Page</h2>
+            <!-- Add the table page description. -->
+            <p>Compare arcade games, inputs, win conditions, and payouts.</p>
+            <!-- Add the table page link. -->
+            <a href="./table.html">Open Table</a>
+        <!-- Close the table page link card. -->
+        </section>
+        <!-- Open the sound page link card. -->
+        <section class="landing-item">
+            <!-- Add the sound page title. -->
+            <h2>UAT Space Sound</h2>
+            <!-- Add the sound page description. -->
+            <p>Use the audio page with a locally included space-style sound file.</p>
+            <!-- Add the sound page link. -->
+            <a href="./sound.html">Open Sound</a>
+        <!-- Close the sound page link card. -->
+        </section>
+    <!-- Close the landing page content card. -->
+    </main>
+    <!-- Open footer section. -->
     <footer>
-        <!-- Add student name line -->
+        <!-- Add student name line. -->
         Dustin Bovee<br>
-        <!-- Add school name line -->
+        <!-- Add school name line. -->
         University of Advancing Technology<br>
-        <!-- Add school street address line -->
+        <!-- Add school street address line. -->
         2625 W. Baseline Road<br>
-        <!-- Add school city, state, and ZIP line -->
+        <!-- Add school city, state, and ZIP line. -->
         Tempe, AZ 85283<br>
+    <!-- Close footer section. -->
     </footer>
-    <!-- Link external JavaScript for Start/Stop event-driven meme movement -->
-    <script src="index.js"></script>
-    <!-- Close the body section -->
+<!-- Close the body section. -->
 </body>
-<!-- Close the html document -->
+<!-- Close the html document. -->
 </html>

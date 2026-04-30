@@ -27,6 +27,10 @@ function initializeMemeControls() {
     stopButton.disabled = true;
     // Show startup status text using innerHTML.
     memeStatus.innerHTML = "Press Start to move the meme around the page.";
+    // Connect the Start button without using an inline HTML function.
+    startButton.onclick = startMemeButtonAction;
+    // Connect the Stop button without using an inline HTML function.
+    stopButton.onclick = stopMemeButtonAction;
 }
 
 // Start-button handler that toggles buttons and starts meme movement.
