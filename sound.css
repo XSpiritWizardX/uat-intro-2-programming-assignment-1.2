@@ -1,0 +1,209 @@
+/* Style the full sound assignment page. */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: #f8fbff;
+    background:
+        radial-gradient(circle at 72% 16%, rgba(255, 207, 112, 0.88), transparent 12rem),
+        radial-gradient(circle at 18% 80%, rgba(98, 198, 196, 0.66), transparent 14rem),
+        linear-gradient(135deg, #07111f, #182b49 52%, #05070c);
+}
+
+/* Style the left navigation menu. */
+nav {
+    position: fixed;
+    top: 28px;
+    left: 24px;
+    width: 170px;
+    padding: 14px;
+    line-height: 30px;
+    border: 2px solid #7cc7ff;
+    border-radius: 8px;
+    background: rgba(5, 12, 24, 0.92);
+    box-shadow: 6px 6px 0 rgba(124, 199, 255, 0.3);
+}
+
+/* Style the navigation heading. */
+nav h2 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Style navigation links. */
+a {
+    color: #d8ecff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Add a navigation hover color. */
+a:hover {
+    color: #ffcf70;
+}
+
+/* Style the main sound content container. */
+.sound-shell {
+    width: min(820px, calc(100% - 240px));
+    margin-left: 230px;
+    padding: 28px;
+    border: 2px solid rgba(216, 236, 255, 0.7);
+    border-radius: 12px;
+    background: rgba(7, 17, 31, 0.86);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Center the header content. */
+header {
+    text-align: center;
+}
+
+/* Style the small mission label. */
+.mission-label {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #ffcf70;
+    color: #07111f;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* Style the main page heading. */
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0;
+}
+
+/* Style the page instruction text. */
+.tagline {
+    max-width: 600px;
+    margin: 10px auto 0;
+    color: #d8ecff;
+    font-size: 1.05rem;
+}
+
+/* Style the audio player panel. */
+.audio-panel {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: center;
+    margin-top: 26px;
+    padding: 22px;
+    border: 1px solid rgba(216, 236, 255, 0.35);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Draw a planet-style creative image with CSS. */
+.planet-art {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+        linear-gradient(28deg, transparent 42%, rgba(255, 255, 255, 0.65) 43%, rgba(255, 255, 255, 0.65) 49%, transparent 50%),
+        radial-gradient(circle at 35% 30%, #fff3bf, #ee9b00 38%, #9b5de5 68%, #14213d);
+    box-shadow: 0 0 34px rgba(255, 207, 112, 0.55);
+}
+
+/* Style the audio content heading. */
+.audio-content h2 {
+    margin: 0 0 8px;
+}
+
+/* Style the audio content paragraph. */
+.audio-content p {
+    color: #d8ecff;
+}
+
+/* Make the audio control fill its panel. */
+audio {
+    width: 100%;
+}
+
+/* Style the animated equalizer container. */
+.equalizer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    height: 120px;
+    margin-top: 22px;
+}
+
+/* Style each animated equalizer bar. */
+.equalizer span {
+    width: 26px;
+    height: 42px;
+    border-radius: 6px 6px 0 0;
+    background: linear-gradient(#9dffcf, #62c6c4);
+    animation: soundPulse 1.2s ease-in-out infinite;
+}
+
+/* Offset the second equalizer bar animation. */
+.equalizer span:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+/* Offset the third equalizer bar animation. */
+.equalizer span:nth-child(3) {
+    animation-delay: 0.24s;
+}
+
+/* Offset the fourth equalizer bar animation. */
+.equalizer span:nth-child(4) {
+    animation-delay: 0.36s;
+}
+
+/* Offset the fifth equalizer bar animation. */
+.equalizer span:nth-child(5) {
+    animation-delay: 0.48s;
+}
+
+/* Animate the equalizer bars up and down. */
+@keyframes soundPulse {
+    /* Start each bar at a short height. */
+    0% {
+        height: 36px;
+    }
+
+    /* Stretch each bar at the midpoint. */
+    50% {
+        height: 110px;
+    }
+
+    /* Return each bar to a short height. */
+    100% {
+        height: 36px;
+    }
+}
+
+/* Make the page comfortable on narrow screens. */
+@media (max-width: 760px) {
+    /* Move navigation into the normal page flow on small screens. */
+    nav {
+        position: static;
+        width: auto;
+        margin-bottom: 18px;
+    }
+
+    /* Let the main content use the full width on small screens. */
+    .sound-shell {
+        width: auto;
+        margin-left: 0;
+    }
+
+    /* Stack the planet and player on small screens. */
+    .audio-panel {
+        grid-template-columns: 1fr;
+    }
+
+    /* Keep the planet art from becoming too large on mobile. */
+    .planet-art {
+        width: min(180px, 100%);
+        margin: 0 auto;
+    }
+}

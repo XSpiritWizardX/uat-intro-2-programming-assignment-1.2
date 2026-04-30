@@ -1,0 +1,93 @@
+<!-- Name: Dustin Bovee -->
+<!DOCTYPE html>
+<!-- Open the root html element for the sound page. -->
+<html lang="en">
+<!-- Open the head section for setup information. -->
+<head>
+    <!-- Set the character encoding for this page. -->
+    <meta charset="UTF-8">
+    <!-- Make the layout work well on mobile screens. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title shown in the browser tab. -->
+    <title>Space Sound Lab</title>
+    <!-- Link the external stylesheet for this sound assignment. -->
+    <link rel="stylesheet" href="sound.css">
+<!-- Close the head section. -->
+</head>
+<!-- Open the visible page body. -->
+<body class="sound-page">
+    <!-- Open the navigation menu. -->
+    <nav>
+        <!-- Add the navigation heading. -->
+        <h2>Navigation</h2>
+        <!-- Link to the home page. -->
+        <a href="./index.html">Home</a><br>
+        <!-- Link to the boards page. -->
+        <a href="./boards.html">Boards</a><br>
+        <!-- Link to the game page. -->
+        <a href="./game.html">Game</a><br>
+        <!-- Link to the strings page. -->
+        <a href="./strings.html">Strings</a><br>
+        <!-- Link to the palindrome checker page. -->
+        <a href="./palindrome.html">Palindrome</a><br>
+        <!-- Link to the sound lab page. -->
+        <a href="./sound.html">Sound</a><br>
+    <!-- Close the navigation menu. -->
+    </nav>
+
+    <!-- Open the main sound experience container. -->
+    <main class="sound-shell">
+        <!-- Open the page header area. -->
+        <header>
+            <!-- Add a small label for the page theme. -->
+            <p class="mission-label">UAT Audio Mission</p>
+            <!-- Add the main page heading. -->
+            <h1>Space Sound Lab</h1>
+            <!-- Add the short user instruction text. -->
+            <p class="tagline">Press play to hear a custom ambient background sound created for this webpage.</p>
+        <!-- Close the page header area. -->
+        </header>
+
+        <!-- Open the visual audio panel. -->
+        <section class="audio-panel">
+            <!-- Add a decorative planet image using CSS styling. -->
+            <div class="planet-art"></div>
+            <!-- Open the audio content area. -->
+            <div class="audio-content">
+                <!-- Add the heading for the audio player. -->
+                <h2>Background Sound</h2>
+                <!-- Add the paragraph describing the sound source. -->
+                <p>This school-appropriate sound is a locally generated ambient audio file.</p>
+                <!-- Add the HTML audio control with looping playback. -->
+                <audio controls loop>
+                    <!-- Add the local sound file source. -->
+                    <source src="space-ambient.wav" type="audio/wav">
+                    <!-- Add fallback text for browsers that do not support audio. -->
+                    Your browser does not support the audio element.
+                <!-- Close the audio control. -->
+                </audio>
+            <!-- Close the audio content area. -->
+            </div>
+        <!-- Close the visual audio panel. -->
+        </section>
+
+        <!-- Open the equalizer decoration area. -->
+        <section class="equalizer" aria-label="Animated sound bars">
+            <!-- Add the first animated sound bar. -->
+            <span></span>
+            <!-- Add the second animated sound bar. -->
+            <span></span>
+            <!-- Add the third animated sound bar. -->
+            <span></span>
+            <!-- Add the fourth animated sound bar. -->
+            <span></span>
+            <!-- Add the fifth animated sound bar. -->
+            <span></span>
+        <!-- Close the equalizer decoration area. -->
+        </section>
+    <!-- Close the main sound experience container. -->
+    </main>
+<!-- Close the visible page body. -->
+</body>
+<!-- Close the html document. -->
+</html>
