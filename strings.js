@@ -1,6 +1,3 @@
-// Run setup when the window finishes loading.
-window.onload = setupForm;
-
 // Setup function that connects form submit behavior.
 function setupForm() {
     // Get the form element from the page.
@@ -97,3 +94,6 @@ function validateAndReveal() {
     // Return false to keep results on the same page.
     return false;
 }
+
+// Run setup after the external script loads at the bottom of the HTML page.
+setupForm();

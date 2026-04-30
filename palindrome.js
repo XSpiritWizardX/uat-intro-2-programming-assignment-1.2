@@ -4,9 +4,6 @@ var checkedPhrases = [];
 // Track whether the form loop should keep accepting new input.
 var loopIsRunning = true;
 
-// Run setup code after the page finishes loading.
-window.onload = setupPalindromeForm;
-
 // Connect the form submission to the palindrome program.
 function setupPalindromeForm() {
     // Get the form element from the HTML page.
@@ -225,3 +222,6 @@ function buildHistoryMessage() {
     // Return the completed history HTML.
     return historyHtml;
 }
+
+// Run setup after the external script loads at the bottom of the HTML page.
+setupPalindromeForm();

@@ -9,9 +9,6 @@ var memeStepX = 8;
 // Store vertical movement speed and direction.
 var memeStepY = 6;
 
-// Initialize button states and status text when the page loads.
-window.onload = initializeMemeControls;
-
 // Setup function to prepare controls for event-driven start/stop behavior.
 function initializeMemeControls() {
     // Get the Start button element.
@@ -158,3 +155,6 @@ function stopMemeMotion() {
     // Reset timer id to indicate stopped state.
     memeIntervalId = null;
 }
+
+// Run setup after the external script loads at the bottom of the HTML page.
+initializeMemeControls();

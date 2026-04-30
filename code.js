@@ -1,9 +1,6 @@
 // Store all game rounds in an array collection for the session history.
 var gameHistory = [];
 
-// Run setup when the page finishes loading.
-window.onload = setupCasinoForm;
-
 // Class used to create a structured object for each completed game round.
 class GameRound {
     // Build one game round object with the player's data and result.
@@ -564,3 +561,6 @@ function showGameHistory() {
     // Display the completed history with innerHTML.
     historyOutput.innerHTML = historyHtml;
 }
+
+// Run setup after the external script loads at the bottom of the HTML page.
+setupCasinoForm();
