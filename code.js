@@ -22,12 +22,20 @@ class GameRound {
 function setupCasinoForm() {
     // Get the casino form element from the page.
     var casinoForm = document.getElementById("casinoForm");
-    // Assign the submit handler without using action listener methods.
-    casinoForm.onsubmit = playSelectedGame;
+    // Check that the form exists before assigning submit behavior.
+    if (casinoForm !== null) {
+        // Assign the submit handler without using action listener methods.
+        casinoForm.onsubmit = playSelectedGame;
+    }
 }
 
 // Main game router function that runs when the form is submitted.
-function playSelectedGame() {
+function playSelectedGame(submitEvent) {
+    // Stop the browser's normal form submit when an event object is available.
+    if (submitEvent) {
+        // Prevent the page from navigating away inside HTMLPreview.
+        submitEvent.preventDefault();
+    }
     // Read and clean the player name input.
     var playerName = document.getElementById("playerName").value.trim();
     // Read the selected game value.

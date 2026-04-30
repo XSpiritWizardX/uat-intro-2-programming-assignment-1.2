@@ -8,12 +8,20 @@ var loopIsRunning = true;
 function setupPalindromeForm() {
     // Get the form element from the HTML page.
     var palindromeForm = document.getElementById("palindromeForm");
-    // Assign the submit function without using event listener methods.
-    palindromeForm.onsubmit = runPalindromeProgram;
+    // Check that the form exists before assigning submit behavior.
+    if (palindromeForm !== null) {
+        // Assign the submit function without using event listener methods.
+        palindromeForm.onsubmit = runPalindromeProgram;
+    }
 }
 
 // Run one pass of the palindrome checker when the form is submitted.
-function runPalindromeProgram() {
+function runPalindromeProgram(submitEvent) {
+    // Stop the browser's normal form submit when an event object is available.
+    if (submitEvent) {
+        // Prevent the page from navigating away inside HTMLPreview.
+        submitEvent.preventDefault();
+    }
     // Get the phrase input element from the page.
     var phraseInput = document.getElementById("phraseInput");
     // Get the select menu that controls whether the loop continues.

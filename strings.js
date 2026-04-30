@@ -2,12 +2,20 @@
 function setupForm() {
     // Get the form element from the page.
     var formElement = document.getElementById("secretForm");
-    // Assign the submit handler without using event-listener APIs.
-    formElement.onsubmit = validateAndReveal;
+    // Check that the form exists before assigning submit behavior.
+    if (formElement !== null) {
+        // Assign the submit handler without using event-listener APIs.
+        formElement.onsubmit = validateAndReveal;
+    }
 }
 
 // Main validation function that runs when the form is submitted.
-function validateAndReveal() {
+function validateAndReveal(submitEvent) {
+    // Stop the browser's normal form submit when an event object is available.
+    if (submitEvent) {
+        // Prevent the page from navigating away inside HTMLPreview.
+        submitEvent.preventDefault();
+    }
     // Read and trim first name input.
     var firstName = document.getElementById("firstName").value.trim();
     // Read and trim last name input.
